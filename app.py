@@ -23,7 +23,7 @@ px.set_mapbox_access_token(access_token)
 
 # with open(r"assets\data\tr-cities.json",encoding='utf-8') as response:
 #     turkey_city= json.load(response)
-turkey_city = gpd.read_file(r"assets\data\tr-cities.json")
+turkey_city = gpd.read_file(r"assets\\data\\tr-cities.json")
 turkey_city = GeoDataFrame(turkey_city, crs="EPSG:4326")
 
 # list_df= []
