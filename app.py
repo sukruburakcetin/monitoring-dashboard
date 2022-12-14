@@ -4,12 +4,7 @@ from dash import Dash, dcc, html, callback
 import plotly.express as px
 import dash_bootstrap_components as dbc
 import pandas as pd
-import json
 import plotly.graph_objects as go
-import warnings
-warnings.filterwarnings("ignore")
-import pathlib
-import psycopg2
 import geopandas as gpd
 from geopandas import GeoDataFrame
 import plotly
@@ -37,7 +32,7 @@ turkey_city = GeoDataFrame(turkey_city, crs="EPSG:4326")
 # for table in cursor.fetchall():
 #     list_df.append(table)
 # tr_nufus = pd.DataFrame(list_df, columns =['Il', 'Erkek', 'Kadin','Toplam','number'])
-tr_nufus = pd.read_excel(r"assets\data\tr_nufus_21.xls")
+tr_nufus = pd.read_excel(r"assets\\data\\tr_nufus_21.xls")
 
 
 
@@ -178,8 +173,8 @@ def update_graph(option_slctd):
 
 
 if __name__ == '__main__':
-    app.run_server(host="0.0.0.0", port=1234)
-    # app.run_server(debug=True, port=1234)
+    # app.run_server(host="0.0.0.0", port=1234)
+    app.run_server(debug=False)
 
 
 print("adaw")
